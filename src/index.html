@@ -18,7 +18,7 @@
                 <option value="neutral">Neutral theme</option>
             </select>
             <pre id="preview"></pre>
-            <div class="buttons">
+            <div id="buttons">
                 <button id="cancel">Cancel</button>
                 <button class="action" type="submit" id="submit">Insert</button>
             </div>
@@ -217,7 +217,7 @@
                 grid-template-areas:
                         "codelabel help preview  preview"
                         "code code preview  preview"
-                        "theme theme rate  buttons ";
+                        "theme theme buttons  buttons ";
                 grid-template-columns:auto auto  1fr auto;
                 grid-template-rows:auto 1fr auto ;
                 gap:20px; 
@@ -227,8 +227,7 @@
             #code{grid-area: code;resize: horizontal; min-width: 200px; font-family: monospace;}
             #theme{grid-area: theme;}
             #preview{grid-area: preview;}
-            #buttons{grid-area: buttons; }
-            #rate{grid-area: rate;}
+            #buttons{grid-area: buttons; display: flex; justify-content: right;}
         </style>
     </body>
 </html>
